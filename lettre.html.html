@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour Toi ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #141414, #2b2b2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.envelope {
+  width: 320px;
+  height: 220px;
+  background: #e8c9a7;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: transform 0.5s;
+}
+
+.envelope:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-bottom: 110px solid #d9b38c;
+  transform-origin: top;
+  transition: transform 0.7s ease;
+}
+
+.letter {
+  position: absolute;
+  width: 300px;
+  height: 420px;
+  background: white;
+  top: 20px;
+  left: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  transform: translateY(120%);
+  transition: transform 1s ease;
+  overflow-y: auto;
+  text-align: left;
+  line-height: 1.6;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.open .envelope:before {
+  transform: rotateX(180deg);
+}
+
+.open .letter {
+  transform: translateY(-260px);
+}
+
+h1 {
+  text-align: center;
+  color: #b76e79;
+}
+
+.signature {
+  margin-top: 25px;
+  font-weight: bold;
+  text-align: right;
+}
+
+audio {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" onclick="openLetter()">
+  <div class="envelope"></div>
+
+  <div class="letter">
+    <h1>Mon amour,</h1>
+
+    <p>
+    Sept mois, ça peut paraître court. Pourtant, en si peu de temps, tu as pris une place immense dans mon cœur et dans ma vie, la plus importante même.
+    </p>
+
+    <p>
+    Tu es devenue mon repère, ma douceur dans les journées compliquées, mon sourire facile sans même essayer. Perdu dans le monde, c’est vers toi que mon âme se redirigera.
+    </p>
+
+    <p>
+    Avec toi, tout est simple. Je peux être moi, sans filtre, sans peur. Tu me rassures, tu m’inspires, tu m’apaises.
+    </p>
+
+    <p>
+    Ce n’est pas juste des mots ou un moment. C’est un choix. Le choix de t’aimer, de te respecter, de prendre soin de nous.
+    </p>
+
+    <p>
+    Je pense à l’avenir et je nous vois, moments après moments, voyages après voyages, toujours aussi amoureux l’un de l’autre, chaque jour un peu plus, dans ce monde et celui d’après.
+    </p>
+
+    <p>
+    Quand je dis que t’es l’amour de ma vie, ce n’est pas une phrase en l’air. C’est une certitude. Je ne m’imagine pas construire avec quelqu’un d’autre. C’est avec toi que je veux évoluer, grandir, devenir un meilleur homme. C’est avec toi que je veux me marier un jour. C’est avec toi que je veux tout vivre.
+    </p>
+
+    <p>
+    Je ne dis pas que ce sera toujours parfait. Mais je sais une chose : je veux affronter les tempêtes avec toi, et si on donne le meilleur de nous-mêmes et qu’on n’abandonne jamais, on se rapprochera de la perfection.
+    </p>
+
+    <p>
+    Tous les jours je remercie Dieu de t’avoir mise sur mon chemin, une rencontre soudaine mais pourtant une évidence, parce que nos âmes se reconnaissent. Je le dis souvent mais j’y crois, t’es mon âme sœur et celle qui a été écrite pour moi.
+    </p>
+
+    <p>
+    Merci pour tout, merci de m’accompagner chaque jour, merci d'être toi-même, merci d'être ce rayon de soleil dans ma vie, merci de m’aimer.
+    </p>
+
+    <p>
+    Je t’aime plus que tout au monde.
+    </p>
+
+    <div class="signature">
+      Ihab ❤️
+    </div>
+
+  </div>
+</div>
+
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function openLetter() {
+  document.body.classList.toggle("open");
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
